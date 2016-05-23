@@ -1,0 +1,128 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{enumitem}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0pt}{0pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+
+	\addtolength{\oddsidemargin}{-.5in}
+	\addtolength{\evensidemargin}{-.55in}
+	\addtolength{\textwidth}{1.0in}
+
+	\addtolength{\topmargin}{-.3in}
+	\addtolength{\textheight}{.95in}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering{\Huge{\textsc{ Gil C. Rodriguez}}}\par}
+
+\centering{\normalsize{787.363.8855}  |   \href{mailto:gil.rodz@gmail.com}{gil.rodz@gmail.com}  |  Austin, TX} \smallskip
+%--------------------SECTIONS-----------------------------------
+%Section: Summary
+\section{Summary}
+
+\begin{flushleft}
+    \par{\normalsize{Experienced Agile Software Support Engineer with an excellent record of teamwork and team management. Specializes in driving support efforts for critical issues affecting enterprise middleware systems. Adept at working with worldwide support teams handling multiple escalation requests simultaneously.}
+    }
+\end{flushleft}
+
+%Section: Work Experience After Summary
+\section{Work Experience}
+\begin{tabular}{r|p{13cm}}
+ \textsc{Apr 2015} \normalsize{to} & \large Staff Software Support Engineer at \textsc{}{IBM Corp.}, \emph{Austin, TX} \\
+ \textsc{{Present}}& \emph{L3 Team Lead \& Queue Manager for WebSphere System Management}\\&
+ 
+ \begin{itemize}
+ \setlength\itemsep{.5em}
+ \item Apply agile principles to manage support aspects of a dynamic team of 10 engineers, resulting in improved collaboration and Incident Management velocity.
+ \item Collaborate with worldwide support to determine root-cause analysis and expedite resolution to critical issues affecting HA systems.
+ \item Identify and target potential serviceability improvements, resulting in a 15\% YOY reduction of incoming L3 service requests.
+ \item Lead efforts to deliver fixes across several service releases,  meeting aggressive deadlines on time, despite staff reductions.
+ \item Provide monthly reports to management and quarterly report to senior management and stakeholders regarding team's support activity.
+ \item Mentor new hires on team culture and support process.
+ \end{itemize} \\
+ \multicolumn{2}{c}{} \\
+ 
+ \textsc{Apr 2012} \normalsize{to} & \large Software Support Engineer at \textsc{IBM Corp.}, \emph{Austin, TX} \\
+ \textsc{Mar 2015}& \emph{L3 Support Specialist for WebSphere System Management}\\&
+
+ \begin{itemize}
+ \setlength\itemsep{.5em}
+ \item Provided L3 support by demonstrating urgency, flexibility  and empathy to ensure quick turn-around for service requests and high client satisfaction.
+ \item Developed educational assets targeted for new hires and interns.
+ \item Participated in the implementation of Agile in the support organization.
+ \item Promoted to Staff Support Engineer during third year.
+ \end{itemize} \\
+ \multicolumn{2}{c}{} \\
+ 
+ \textsc{Oct 2006} \normalsize{to} & \large Freelance Technician, \emph{Ponce, PR} \\
+\textsc{Dec 2011} & \emph{IT Support \& Web Design }\\&
+ \begin{itemize}
+  \setlength\itemsep{.5em}
+ \item Diagnosed computer hardware, providing technical support services.
+ \item Developed web design assets for local businesses.
+ \end{itemize} \\
+ \multicolumn{2}{c}{} \\
+ 
+\textsc{Oct 2009} \normalsize{to} & \large Teaching Assistant at \textsc{Universidad del Turabo}, \emph{Ponce, PR} \\
+\textsc{May 2010} & \emph{Teaching Assistant}\\&
+ \begin{itemize}
+  \setlength\itemsep{.5em}
+ \item Designed individual and group study lessons on various subjects. 
+ \end{itemize} \\
+ \multicolumn{2}{c}{} \\
+ 
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{December} 2011 & BBA in \textsc{Information Systems}, \textbf{Universidad del Turabo}, Ponce, PR\\
+\end{tabular}
+
+\section{Skills}
+\begin{tabular}{rl}
+Basic Knowledge:& \normalsize{Java, JavaScript}, \textsc{html5, css3}, \normalsize{Linux}\\
+Intermediate Knowledge:& \normalsize{WebSphere}, \textsc{RTC}, \normalsize{eclipse, agile, scrum}, \textsc{ITSM} \\
+\end{tabular}
+
+\end{document}
